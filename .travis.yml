@@ -1,0 +1,30 @@
+language: cpp
+compiler:
+  - gcc
+  - clang
+before_install:
+   - sudo apt-get install swig
+   - sudo add-apt-repository "deb http://ftp.us.debian.org/debian/ experimental main" -y
+   - sudo apt-get update -q
+   - sudo apt-get install -t experimental liboce-ocaf-dev oce-draw liboce-foundation-dev liboce-modeling-dev
+before_script:
+  - mkdir cmake-build
+  - cd cmake-build
+#  Depth is necessary, otherwise DRAWEXE exits with this message:
+#    Tcl Exception: ** Exception ** 0x7fee03adb307 : Aspect_WindowDefinitionError: Xw_Window, couldn't find compatible Visual (RGBA, double-buffered)
+script: xvfb-run -s "-screen 0 1024x768x16" ../.travis.build.sh
+#after_script:
+#  - test ! -r occt/summary.xml || xsltproc --param duration 1 ../.travis.xsl occt/summary.xml
+#  - if [ -r occt/summary.xml ]; then
+#        xsltproc ../.travis.xsl occt/summary.xml > occt/summary.failed;
+#        if [ -s occt/summary.failed ]; then
+#            echo "FAILED TESTS:";
+#            cat occt/summary.failed;
+#            for file in $(cat occt/summary.failed); do head -n -1 occt/$file.{tcl,log}; done;
+#        fi;
+#    fi
+branches:
+  only:
+    - master
+    - /^review/
+
