@@ -6,7 +6,7 @@ before_install:
    - sudo apt-get install swig
    - sudo add-apt-repository "deb http://ftp.us.debian.org/debian/ experimental main" -y
    - sudo apt-get update -q
-   - sudo apt-get install -t experimental liboce-ocaf-dev oce-draw liboce-foundation-dev liboce-modeling-dev
+   - sudo apt-get install -t experimental liboce-ocaf-dev oce-draw
 before_script:
   - mkdir cmake-build
   - cd cmake-build
@@ -27,4 +27,4 @@ branches:
   only:
     - master
     - /^review/
-
+#
