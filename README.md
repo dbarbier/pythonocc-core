@@ -1,5 +1,5 @@
 Travis-CI Build Status :
-[![Build Status](https://travis-ci.org/tpaviot/pythonocc-core.png?branch=master)](https://travis-ci.org/tpaviot/pythonocc-core)
+[![Build Status](https://travis-ci.org/dbarbier/pythonocc-core.png?branch=master)](https://travis-ci.org/dbarbier/pythonocc-core)
 
 pythonocc-core
 ==============
