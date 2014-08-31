@@ -5,7 +5,8 @@ compiler:
 before_install:
    - sudo apt-get install swig
    - sudo add-apt-repository "deb http://ftp.us.debian.org/debian/ experimental main" -y
-   - sudo apt-get update -q
+   - sudo apt-get update
+   - apt-cache policy oce-draw libtcl8.5 libtk8.5
    - sudo apt-get install -t experimental liboce-ocaf-dev oce-draw
 before_script:
   - mkdir cmake-build
