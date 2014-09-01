@@ -7,7 +7,7 @@ before_install:
    - sudo add-apt-repository "deb http://ftp.us.debian.org/debian/ experimental main" -y
    - sudo apt-get update
    - apt-cache policy oce-draw tcl8.5-dev tk8.5-dev
-   - sudo apt-get install -t experimental liboce-ocaf-dev oce-draw
+   - sudo apt-get install -t experimental oce-draw liboce-ocaf-dev liboce-visualization-dev liboce-ocaf-lite-dev liboce-modeling-dev liboce-foundation-dev liboce-ocaf9 liboce-visualization9 liboce-ocaf-lite9 liboce-modeling9 liboce-foundation9 tcl8.5-dev tk8.5-dev libtcl8.5 libtk8.5
 before_script:
   - mkdir cmake-build
   - cd cmake-build
